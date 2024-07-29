@@ -3,9 +3,15 @@
     <ResourceDictionary.ThemeDictionaries>
         <ResourceDictionary x:Key='Light'>
             <SolidColorBrush x:Key='Seperator'>#EDEDFE</SolidColorBrush>
+            <SolidColorBrush x:Key='ListItem_Selected'>#5c82cc</SolidColorBrush>
+            <SolidColorBrush x:Key='PlatformListSectionBackground' Color="#fafafa"/>
+            <SolidColorBrush x:Key='CategoryListSectionBackground' Color="#fafafa"/>
         </ResourceDictionary>
         <ResourceDictionary x:Key='Dark'>
-            <SolidColorBrush x:Key='Seperator'>Black</SolidColorBrush>
+            <SolidColorBrush x:Key='Seperator'>#312c35</SolidColorBrush>
+            <SolidColorBrush x:Key='ListItem_Selected'>#8961cc</SolidColorBrush>
+            <SolidColorBrush x:Key='PlatformListSectionBackground' Color="#262738"/>
+            <SolidColorBrush x:Key='CategoryListSectionBackground' Color="#f0f0f0"/>
         </ResourceDictionary>
     </ResourceDictionary.ThemeDictionaries>
 </ResourceDictionary>

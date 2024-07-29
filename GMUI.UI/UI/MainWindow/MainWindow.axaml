@@ -21,42 +21,61 @@
                 BorderThickness="0,0,0,1"
                 DockPanel.Dock="Top"
                 Padding="5">
-			<StackPanel VerticalAlignment="Center"
-                        Orientation="Horizontal">
-				<Button Background="Transparent">
+			<DockPanel LastChildFill="True">
+				<Button Background="Transparent" DockPanel.Dock="Left">
 					<Panel>
 						<Svg Path="/Assets/toolbar_open.svg" />
 					</Panel>
 				</Button>
-				<Panel Width="1" Background="LightGray" Margin="4,0,4,0"/>
-				<Button Background="Transparent" Click="PlatformToggle_Click">
+				<Panel Width="1" Background="LightGray" Margin="4,0,4,0" DockPanel.Dock="Left"/>
+				<Button Background="Transparent" DockPanel.Dock="Left" Click="PlatformToggle_Click">
 					<Panel>
 						<Svg IsVisible="{Binding !IsPlatformVisiable}" Path="/Assets/toolbar_platform_off.svg" />
 						<Svg IsVisible="{Binding IsPlatformVisiable}" Path="/Assets/toolbar_platform_on.svg" />
 					</Panel>
 				</Button>
-				<Button Background="Transparent" Click="CategoryToggle_Click">
+				<Button Background="Transparent" DockPanel.Dock="Left" Click="CategoryToggle_Click">
 					<Panel>
 						<Svg IsVisible="{Binding !IsCategoryVisiable}" Path="/Assets/toolbar_category_off.svg" />
 						<Svg IsVisible="{Binding IsCategoryVisiable}" Path="/Assets/toolbar_category_on.svg" />
 					</Panel>
 				</Button>
-				<Button Background="Transparent" Click="PropertyToggle_Click">
+				<Button Background="Transparent" DockPanel.Dock="Left" Click="PropertyToggle_Click">
 					<Panel>
 						<Svg IsVisible="{Binding !IsPropertyVisiable}" Path="/Assets/toolbar_property_off.svg" />
 						<Svg IsVisible="{Binding IsPropertyVisiable}" Path="/Assets/toolbar_property_on.svg" />
 					</Panel>
 				</Button>
-			</StackPanel>
+
+				<Button DockPanel.Dock="Right" Background="Transparent">
+					<Button.Content>
+						<Panel>
+							<Svg Path="/Assets/toolbar_setting.svg" />
+						</Panel>
+					</Button.Content>
+					<Button.Flyout>
+						<MenuFlyout Placement="LeftEdgeAlignedTop">
+							<MenuItem Header="Add Platform" />
+							<MenuItem Header="Categories" />
+							<MenuItem Header="-" />
+							<MenuItem Header="Setting" />
+							<MenuItem Header="About" />
+						</MenuFlyout>
+					</Button.Flyout>
+				</Button>
+				<Panel />
+			</DockPanel>
 		</Border>
 		<Border IsVisible="{Binding IsPlatformVisiable}" Width="200"
                 BorderBrush="{StaticResource Seperator}"
+				Background="{StaticResource PlatformListSectionBackground}"
                 BorderThickness="0,0,1,0"
                 DockPanel.Dock="Left">
 			<vm:PlatformListView />
 		</Border>
 		<Border  IsVisible="{Binding IsCategoryVisiable}" Width="200"
                 BorderBrush="{StaticResource Seperator}"
+				Background="{StaticResource CategoryListSectionBackground}"
                 BorderThickness="0,0,1,0"
                 DockPanel.Dock="Left">
 			<vm:CategoryListView />

@@ -17,7 +17,9 @@ public partial class App : Application
         {
             desktop.MainWindow = new MainWindow()
             {
-                DataContext = new MainWindowModel()
+                DataContext = new MainWindowModel(),
+                MinWidth = 1000,
+                MinHeight = 600
             };
         }
 

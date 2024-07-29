@@ -21,10 +21,9 @@
 
 	<ItemGroup>
 		<AvaloniaResource Include="Assets\**" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <AvaloniaXaml Remove="Assets\*.axaml" />
+    <AvaloniaResource Update="Assets\Theme.axaml">
+      <SubType>Designer</SubType>
+    </AvaloniaResource>
 	</ItemGroup>
 	
   <ItemGroup>
@@ -33,11 +32,5 @@
 
   <ItemGroup>
     <ProjectReference Include="..\GMUI.Data\GMUI.Data.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <AvaloniaResource Update="Assets\Theme.axaml">
-      <SubType>Designer</SubType>
-    </AvaloniaResource>
   </ItemGroup>
 </Project>
