@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GMUI.Data", "GMUI.Data\GMUI.Data.csproj", "{388929D5-0252-46AB-94E8-D25BDDDD3E3B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GMUI.UI", "GMUI.UI\GMUI.UI.csproj", "{4D8B432F-738D-4CB8-80C4-CA081DE70DD7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{388929D5-0252-46AB-94E8-D25BDDDD3E3B} = {388929D5-0252-46AB-94E8-D25BDDDD3E3B}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{388929D5-0252-46AB-94E8-D25BDDDD3E3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{388929D5-0252-46AB-94E8-D25BDDDD3E3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{388929D5-0252-46AB-94E8-D25BDDDD3E3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{388929D5-0252-46AB-94E8-D25BDDDD3E3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D8B432F-738D-4CB8-80C4-CA081DE70DD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D8B432F-738D-4CB8-80C4-CA081DE70DD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D8B432F-738D-4CB8-80C4-CA081DE70DD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D8B432F-738D-4CB8-80C4-CA081DE70DD7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E27EB540-C142-495A-B251-896CE4AFE5EB}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,35 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="200" d:DesignHeight="450"
+			 xmlns:vm="using:GMUI.UI.ViewModel"
+             x:Class="GMUI.UI.CategoryListView">
+	<UserControl.Styles>
+		<Style Selector="TextBlock.listItemTitle">
+			<Setter Property="FontSize" Value="14"/>
+			<Setter Property="FontWeight" Value="Bold"/>
+		</Style>
+		<Style Selector="Border.selected">
+			<Setter Property="Background" Value="BlanchedAlmond" />
+		</Style>
+		<Style Selector="Border.categoryItem:pointerover">
+			<Setter Property="Background" Value="Azure" />
+		</Style>
+	</UserControl.Styles>
+	<ScrollViewer>
+		<ItemsControl Name="ListView">
+			<ItemsControl.ItemTemplate>
+				<DataTemplate DataType="vm:CategoryViewModel">
+					<Border Margin="5,5,5,0" Padding="10" CornerRadius="10"
+							Classes="categoryItem"
+							Classes.selected="{Binding IsSelected}">
+						<StackPanel Orientation="Vertical">
+							<TextBlock Text="{Binding Name}" Classes="listItemTitle"></TextBlock>
+						</StackPanel>
+					</Border>
+				</DataTemplate>
+			</ItemsControl.ItemTemplate>
+		</ItemsControl>
+	</ScrollViewer>
+</UserControl>

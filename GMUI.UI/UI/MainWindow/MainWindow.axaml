@@ -1,0 +1,75 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:vm="using:GMUI.UI"
+		xmlns:coms="usin"
+        mc:Ignorable="d"
+        d:DesignWidth="800"
+        d:DesignHeight="450"
+        x:Class="GMUI.UI.MainWindow"
+        Title="GMUI"
+		x:DataType="vm:MainWindowModel">
+	<Window.DataContext>
+		<vm:MainWindowModel />
+	</Window.DataContext>
+	<Window.Styles>
+	</Window.Styles>
+	<DockPanel LastChildFill="True">
+		<Border Height="44"
+                BorderBrush="Black"
+                BorderThickness="0,0,0,1"
+                DockPanel.Dock="Top"
+                Padding="5">
+			<StackPanel VerticalAlignment="Center"
+                        Orientation="Horizontal">
+				<Button Background="Transparent">
+					<Panel>
+						<Svg Path="/Assets/toolbar_open.svg" />
+					</Panel>
+				</Button>
+				<Panel Width="1" Background="LightGray"/>
+				<Button Background="Transparent" Click="PlatformToggle_Click">
+					<Panel>
+						<Svg IsVisible="{Binding !IsPlatformVisiable}" Path="/Assets/toolbar_platform_off.svg" />
+						<Svg IsVisible="{Binding IsPlatformVisiable}" Path="/Assets/toolbar_platform_on.svg" />
+					</Panel>
+				</Button>
+				<Button Background="Transparent" Click="CategoryToggle_Click">
+					<Panel>
+						<Svg IsVisible="{Binding !IsCategoryVisiable}" Path="/Assets/toolbar_category_off.svg" />
+						<Svg IsVisible="{Binding IsCategoryVisiable}" Path="/Assets/toolbar_category_on.svg" />
+					</Panel>
+				</Button>
+				<Button Background="Transparent" Click="PropertyToggle_Click">
+					<Panel>
+						<Svg IsVisible="{Binding !IsPropertyVisiable}" Path="/Assets/toolbar_property_off.svg" />
+						<Svg IsVisible="{Binding IsPropertyVisiable}" Path="/Assets/toolbar_property_on.svg" />
+					</Panel>
+				</Button>
+			</StackPanel>
+		</Border>
+		<Border IsVisible="{Binding IsPlatformVisiable}" Width="200"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,0"
+                DockPanel.Dock="Left">
+			<vm:PlatformListView />
+		</Border>
+		<Border  IsVisible="{Binding IsCategoryVisiable}" Width="200"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,0"
+                DockPanel.Dock="Left">
+			<vm:CategoryListView />
+		</Border>
+		<Border IsVisible="{Binding IsPropertyVisiable}" Width="200"
+		BorderBrush="Black"
+		BorderThickness="1,0,0,0"
+		DockPanel.Dock="Right">
+			<TextBlock Foreground="Black">Properties</TextBlock>
+		</Border>
+		<Border Background="White">
+			<TextBlock Foreground="Black">This content will "Fill" the remaining space</TextBlock>
+		</Border>
+
+	</DockPanel>
+</Window>
