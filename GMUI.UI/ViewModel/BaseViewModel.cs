@@ -10,8 +10,8 @@ internal class BaseViewModel<T>
 {
     public T Value { get; set; }
 
-    public bool IsSelected { get; set; }
-    public bool IsChecked { get; set; }
+    public bool IsSelected { get; set; } = false;
+    public bool IsChecked { get; set; } = false;
 
-    public bool IsVisiable { get; set; }
+    public bool IsVisiable { get; set; } = true;
 }

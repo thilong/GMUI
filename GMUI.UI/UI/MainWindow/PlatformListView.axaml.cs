@@ -14,7 +14,7 @@ public partial class PlatformListView : UserControl
 
         ListView.ItemsSource = new List<PlatformViewModel>()
         {
-            new PlatformViewModel(null),
+            new PlatformViewModel(null){IsSelected = true},
             new PlatformViewModel(null)
         };
     }

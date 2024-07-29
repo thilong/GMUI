@@ -24,7 +24,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <AvaloniaXaml Remove="Assets\Icons.axaml" />
+	  <AvaloniaXaml Remove="Assets\*.axaml" />
 	</ItemGroup>
 	
   <ItemGroup>
@@ -36,7 +36,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <AvaloniaResource Update="Assets\Icons.axaml">
+    <AvaloniaResource Update="Assets\Theme.axaml">
       <SubType>Designer</SubType>
     </AvaloniaResource>
   </ItemGroup>

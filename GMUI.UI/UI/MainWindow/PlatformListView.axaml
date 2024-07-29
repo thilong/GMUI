@@ -13,12 +13,24 @@
 		<Style Selector="TextBlock.listItemDesc">
 			<Setter Property="FontSize" Value="12"/>
 		</Style>
+		<Style Selector="Border.platformItem">
+			<Setter Property="Background" Value="Transparent" />
+		</Style>
+		<Style Selector="Border.selected">
+			<Setter Property="Background" Value="" />
+		</Style>
+		<Style Selector="Border.platformItem:pointerover">
+			<Setter Property="Background" Value="Azure" />
+		</Style>
 	</UserControl.Styles>
 	<ScrollViewer>
 		<ItemsControl Name="ListView">
 			<ItemsControl.ItemTemplate>
 				<DataTemplate DataType="vm:PlatformViewModel">
-					<Border Margin="5,5,5,0" Background="BlanchedAlmond" Padding="10" CornerRadius="10">
+					<Border
+						Classes="platformItem"
+						Classes.selected="{Binding IsSelected}"
+					 	Margin="5,5,5,0" Padding="10" CornerRadius="10">
 						<StackPanel Orientation="Vertical">
 							<TextBlock Text="{Binding Name}" Classes="listItemTitle"></TextBlock>
 							<TextBlock Text="{Binding Description}" Classes="listItemDesc"></TextBlock>

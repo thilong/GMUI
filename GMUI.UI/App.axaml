@@ -5,7 +5,25 @@
              <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
 
     <Application.Styles>
-        <FluentTheme />
-		<StyleInclude Source="/Assets/Icons.axaml" />
+        <FluentTheme>
+            <FluentTheme.Palettes>
+                <ColorPaletteResources x:Key="Light" Accent="#ff5c82cc" AltHigh="White" AltLow="White" AltMedium="White" AltMediumHigh="White" AltMediumLow="White" BaseHigh="Black" BaseLow="#ffdcdbff" BaseMedium="#ff9294c0" BaseMediumHigh="#ff606596" BaseMediumLow="#ff797dab" ChromeAltLow="#ff606596" ChromeBlackHigh="Black" ChromeBlackLow="#ffdcdbff" ChromeBlackMedium="#ff606596" ChromeBlackMediumLow="#ff9294c0" ChromeDisabledHigh="#ffdcdbff" ChromeDisabledLow="#ff9294c0" ChromeGray="#ff797dab" ChromeHigh="#ffdcdbff" ChromeLow="#fff1f1ff" ChromeMedium="#ffededff" ChromeMediumLow="#fff1f1ff" ChromeWhite="White" ListLow="#ffededff" ListMedium="#ffdcdbff" RegionColor="White" />
+                <ColorPaletteResources x:Key="Dark" Accent="#ff8961cc" AltHigh="Black" AltLow="Black" AltMedium="Black" AltMediumHigh="Black" AltMediumLow="Black" BaseHigh="White" BaseLow="#ff64576b" BaseMedium="#ffb6aabc" BaseMediumHigh="#ffcbbfd0" BaseMediumLow="#ff8d8193" ChromeAltLow="#ffcbbfd0" ChromeBlackHigh="Black" ChromeBlackLow="#ffcbbfd0" ChromeBlackMedium="Black" ChromeBlackMediumLow="Black" ChromeDisabledHigh="#ff64576b" ChromeDisabledLow="#ffb6aabc" ChromeGray="#ffa295a8" ChromeHigh="#ffa295a8" ChromeLow="#ff332041" ChromeMedium="#ff3f2e4b" ChromeMediumLow="#ff584960" ChromeWhite="White" ListLow="#ff3f2e4b" ListMedium="#ff64576b" RegionColor="#ff262738" />
+            </FluentTheme.Palettes>
+        </FluentTheme>
     </Application.Styles>
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key='Light'>
+                    <SolidColorBrush x:Key='Seperator'>#EDEDFE</SolidColorBrush>
+                    <SolidColorBrush x:Key='ListItem_Selected'>#5c82cc</SolidColorBrush>
+                </ResourceDictionary>
+                <ResourceDictionary x:Key='Dark'>
+                    <SolidColorBrush x:Key='Seperator'>#312c35</SolidColorBrush>
+                    <SolidColorBrush x:Key='ListItem_Selected'>#8961cc</SolidColorBrush>
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
 </Application>

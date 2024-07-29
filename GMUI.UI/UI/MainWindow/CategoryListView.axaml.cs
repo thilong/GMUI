@@ -12,9 +12,9 @@ public partial class CategoryListView : UserControl
         InitializeComponent();
         ListView.ItemsSource = new List<CategoryViewModel>()
         {
-            new CategoryViewModel("全部游戏"){IsSelected=true},
-            new CategoryViewModel("角色扮演"),
-            new CategoryViewModel("解迷")
+            new CategoryViewModel("鍏ㄩ儴娓告垙"){IsSelected=true},
+            new CategoryViewModel("瑙掕壊鎵紨"),
+            new CategoryViewModel("鍔ㄤ綔娓告垙"),
         };
     }
 }
